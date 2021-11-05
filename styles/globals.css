@@ -1,16 +1,129 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  box-sizing: border-box;
+@layer components {
+  .bg{
+    background-color: var(--ion-background-color);
+  }
+
+  a,input, textarea,a:hover,a:focus,a:active,select,select:focus,select:hover{
+    @apply outline-none
+  }
+
+  .badge{
+    @apply px-2 py-1 bg-primary rounded-full text-xxs
+  }
+
+
+  button:disabled{
+    @apply bg-medium-shade text-medium
+  }
+
+  .input{
+    @apply bg-medium-shade px-4 py-2 w-full text-sm mb-2
+  }
+
+  .btn-primary{
+    @apply py-2 bg-primary text-white rounded-full
+  }
+
+  table, td, th {
+    @apply border p-2
+  }
+
+  .z-100 {
+    z-index: 100;
+  }
+
+  .z-200 {
+    z-index: 200 !important;
+  }
+
+  .z-1000 {
+    z-index: 1000 !important;
+  }
+
+  .z-2000 {
+    z-index: 2000 !important;
+  }
+
+  .z-3000 {
+    z-index: 3000 !important;
+  }
+
+  .z-4000 {
+    z-index: 4000 !important;
+  }
+
+  .font-times {
+    font-family: "Times New Roman";
+  }
+
+  .flex-center{
+    @apply  flex items-center justify-center
+  }
+
+  .icon-btn{
+    @apply flex items-center justify-center h-10 w-10 rounded-full
+  }
+
+  @responsive {
+    .w-28 {
+      width: 7rem;
+    }
+    .h-52 {
+      height: 13rem;
+    }
+    .h-58 {
+      height: 15rem;
+    }
+    .h-128 {
+      height: 32rem;
+    }
+    .h-36 {
+      height: 9rem;
+    }
+
+    .h-74 {
+      height: 22rem;
+    }
+
+    .max-h-half {
+      max-height: 50vh;
+    }
+
+    .min-h-half {
+      min-height: 50vh;
+    }
+
+    .min-h-80 {
+      min-height: 80vh;
+    }
+
+    .min-h-70 {
+      min-height: 70vh;
+    }
+    .max-w-7xl {
+      max-width: 80rem;
+    }
+    .w-74 {
+      width: 18rem;
+    }
+    .w-84 {
+      width: 20rem;
+    }
+  }
+
+  .text-ellipsis{
+    text-overflow: ellipsis;
+  }
+
+  .text-xxs{
+    font-size: 0.65rem;
+  }
+  .bg-dark-trans{
+    background-color: rgba(0,0,0,0.77);
+  }
 }

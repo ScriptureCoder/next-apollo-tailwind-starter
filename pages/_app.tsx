@@ -5,7 +5,8 @@ import {cache,client} from "../apollo-client";
 import AlphaStorage from "../utils/alpha-storage";
 import {persistCache} from "apollo-cache-persist";
 import {useEffect, useState} from "react";
-import {ApolloProvider} from "@apollo/react-common";
+// import {ApolloProvider} from "@apollo/react-common";
+import { ApolloProvider } from '@apollo/react-hooks';
 
 function MyApp({ Component, pageProps }: AppProps) {
     const [iClient, setClient] = useState<any>(undefined);
@@ -28,9 +29,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         return () => {};
     }, []);
 
-    if (iClient === undefined) return (
+    /*if (iClient === undefined) return (
         <div>Loading....</div>
-    );
+    );*/
 
     return (
         <ApolloProvider client={client}>

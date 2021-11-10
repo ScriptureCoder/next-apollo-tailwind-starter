@@ -13,7 +13,7 @@ function TopSection() {
             <div className="h-full flex flex-col md:flex-row">
                 <div className="flex-1 flex items-center">
                     <div className="px-5 lg:pl-40 lg:pr-0">
-                        <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-primary leading-normal mt-8">Explore the treasures of life hidden inside books</h1>
+                        <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-normal mt-8">Explore the treasures of life hidden inside books</h1>
                         <p className="text-lg leading-loose">
                             Read amazing books from our wide range of collections and experience the awesomeness of Instasage.
                         </p>

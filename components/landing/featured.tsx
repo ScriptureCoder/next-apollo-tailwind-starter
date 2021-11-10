@@ -34,7 +34,7 @@ const Featured: React.FC<FeaturedProps> = ({books}) => {
                     {books.map((data:any,index:any)=>(
                         <div key={index} className="w-1/3 sm:w-1/4 md:w-1/6 p-2 px-2 md:px-3">
                             <Link href={`/book/${data.slug}`}>
-                                <div className="p-1 md:p-2 text-sm flex flex-col bg shadow">
+                                <div className="p-1 md:p-2 text-sm flex flex-col bg ">
                                     <img src={`${data.image}?w=250&h=300`} alt="" className="w-28 h-36 md:w-40 md:h-58 mb-2 img-gray self-center"/>
                                     <div className="h-24">
                                         <p className="w-full capitalize text text-left">

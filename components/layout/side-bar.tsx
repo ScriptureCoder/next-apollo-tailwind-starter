@@ -1,11 +1,18 @@
 import Link from 'next/link';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {SideBarProps} from "../../types/types";
 import {IonIcon} from "@ionic/react";
 import IconBtn from "../../utils/icon-btn";
 import {closeOutline} from "ionicons/icons";
 
 const SideBar: React.FC<SideBarProps> = ({menu,toggle,show}) => {
+    useEffect(()=>{
+        if (show){
+            document.body.classList.add("fixed")
+        }else {
+            document.body.classList.remove("fixed")
+        }
+    },[show]);
     return (
         <>
             {show&&(

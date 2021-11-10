@@ -31,53 +31,18 @@ const Home: NextPage = ({books,menu}) => {
     const toggle=()=>(setToggleMenu(!toggleMenu))
     return (
         <div className="font-pop relative">
-
             <Header menu={menu} toggle={toggle}/>
-
             <TopSection/>
             <Features/>
             <Hiw/>
 
             <Featured books={books}/>
 
-            {/*<section className="py-10">
-                <PopularCategories/>
-            </section>*/}
-
-            {/*<section className="min-h-half flex items-center bg-primary">
-                <div className="container mx-auto flex flex-col md:flex-row items-center py-10">
-                    <div className="flex-1 p-4">
-                        <h1 className="text-2xl lg:text-4xl mb-4 font-bold text-white">Publish on Instasage, Keep 90% of Royalties on Your Book</h1>
-                        <p className="text-white">
-                            Authors deserve a large percentage of royalties for their work. Instasage makes it possible.
-                        </p>
-                        <div className="py-10">
-                            <Link href="/article/publish-on-instasage-keep-95percent-of-royalties-on-your-book">
-                                <a className="border border-white text-white rounded-full px-10 py-4">Learn more</a>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="flex-1 order-first md:order-last p-2 bg-white" style={{clipPath: "polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%)"}}>
-                        <div className="bg-cover" style={{backgroundImage:`url(${slide2})`,height:"40vh",clipPath: "polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%)"}}/>
-                    </div>
-                </div>
-            </section>*/}
-
             <Parallax/>
+
 
             <div className="py-5 bg-shade">
 
-                {/*<div className="flex-center py-4">
-                    <div>
-                        <h2 className="text-center text-2xl font-bold mb-2">Available On</h2>
-                        <div className="flex items-center">
-                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.instasage.app">
-                                <Image src={google} alt="" className="h-12 px-2"/>
-                            </a>
-                            <Image src={apple} alt="" className="h-12 px-2"/>
-                        </div>
-                    </div>
-                </div>*/}
                 <p className="flex-center text-xs text-medium">
                     © {new Date().getFullYear()} Instasage by AlphaCipher
                 </p>

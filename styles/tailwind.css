@@ -7,7 +7,9 @@
   .bg{
     background-color: var(--ion-background-color);
   }
-
+  .bg-gradient{
+    background: linear-gradient(-47deg, var(--ion-color-primary-tint) 0%, var(--ion-color-primary) 100%);
+  }
   .modal {
     background-color: rgba(0,0,0,0.41);
   }

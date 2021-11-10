@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Image from "next/image";
 import google from "../../public/assets/images/google-play-w.png"
 import apple from "../../public/assets/images/app-store-w.png"
-import Slide1 from "../../public/assets/images/slide1.png";
+import Slide1 from "../../public/assets/images/featured-image.png";
 
 export type ParallaxProps = {}
 

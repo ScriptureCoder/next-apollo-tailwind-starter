@@ -1,5 +1,5 @@
 import '../styles/variables.css'
-import '../styles/globals.css'
+import '../styles/tailwind.css'
 import { AppProps } from 'next/app'
 import {cache,client} from "../apollo-client";
 import AlphaStorage from "../utils/alpha-storage";

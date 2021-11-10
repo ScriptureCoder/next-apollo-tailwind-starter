@@ -21,19 +21,23 @@ import {FEATURED_BOOKS} from "../utils/queries";
 import Parallax from "../components/landing/parallax";
 import Features from "../components/landing/features";
 import Hiw from "../components/landing/hiw";
-import React from "react";
+import React, {useState} from "react";
 import logo from "../public/assets/images/logo.png"
 import Header from "../components/layout/header";
+import SideBar from "../components/layout/side-bar";
 
-const Home: NextPage = ({books}) => {
+const Home: NextPage = ({books,menu}) => {
+    const [toggleMenu,setToggleMenu] = useState(false);
+    const toggle=()=>(setToggleMenu(!toggleMenu))
     return (
-        <div className="font-sans relative">
+        <div className="font-pop relative">
 
-            <Header/>
+            <Header menu={menu} toggle={toggle}/>
 
             <TopSection/>
+            <Features/>
             <Hiw/>
-            {/*<Features/>*/}
+
             <Featured books={books}/>
 
             {/*<section className="py-10">
@@ -78,6 +82,7 @@ const Home: NextPage = ({books}) => {
                     © {new Date().getFullYear()} Instasage by AlphaCipher
                 </p>
             </div>
+            <SideBar menu={menu} show={toggleMenu} toggle={toggle}/>
         </div>
     )
 }
@@ -87,10 +92,17 @@ export async function getStaticProps() {
         query: FEATURED_BOOKS,
         variables:{page:1,limit:6}
     });
+    const menu = [
+        {name:"Books",path:"/"},
+        {name:"Article",path:"/"},
+        {name:"Publish a book",path:"/"},
+        {name:"Read",path:"/"},
+    ]
 
     return {
         props: {
             books:data.featuredBooks,
+            menu
         },
     };
 }

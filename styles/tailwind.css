@@ -8,12 +8,20 @@
     background-color: var(--ion-background-color);
   }
 
+  .modal {
+    background-color: rgba(0,0,0,0.41);
+  }
+
   a,input, textarea,a:hover,a:focus,a:active,select,select:focus,select:hover{
     @apply outline-none
   }
 
   .badge{
     @apply px-2 py-1 bg-primary rounded-full text-xxs
+  }
+
+  .font-pop{
+    font-family: 'Poppins', sans-serif;
   }
 
 
@@ -92,6 +100,14 @@
 
     .h-screen-90 {
       height: 90vh;
+    }
+
+    .h-screen-80 {
+      height: 80vh;
+    }
+
+    .h-screen-75 {
+      height: 75vh;
     }
 
     .max-h-half {

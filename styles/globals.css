@@ -90,6 +90,10 @@
       height: 22rem;
     }
 
+    .h-screen-90 {
+      height: 90vh;
+    }
+
     .max-h-half {
       max-height: 50vh;
     }
@@ -100,6 +104,10 @@
 
     .min-h-80 {
       min-height: 80vh;
+    }
+
+    .min-h-90 {
+      min-height: 90vh;
     }
 
     .min-h-70 {

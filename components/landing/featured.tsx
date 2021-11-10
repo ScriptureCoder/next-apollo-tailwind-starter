@@ -5,10 +5,12 @@ import ErrorInline from "../errors/error-inline";
 import Preloader from "../global/preloader";
 import Link from 'next/link';
 
-export type FeaturedProps = {}
+export type FeaturedProps = {
+    books:any[]
+}
 
-const Featured: React.FC<FeaturedProps> = () => {
-    const {data, loading,fetchMore, error,refetch} = useQuery(FEATURED_BOOKS,{variables:{page:1,limit:5}});
+const Featured: React.FC<FeaturedProps> = ({books}) => {
+    /*const {data, loading,fetchMore, error,refetch} = useQuery(FEATURED_BOOKS,{variables:{page:1,limit:5}});
 
     useEffect(()=>{
         if (data || error) {
@@ -22,15 +24,15 @@ const Featured: React.FC<FeaturedProps> = () => {
     },[]);
 
     if (loading) return <Preloader/>;
-    if(error) return <ErrorInline refetch={refetch} error={error}/>;
+    if(error) return <ErrorInline refetch={refetch} error={error}/>;*/
 
     return (
         <section className="py-10 bg-shade">
-            <div className="container max-w-5xl ">
-                <h3 className="text-2xl font-bold text-center capitalize mb-4">Discover amazing Books with Audiobooks</h3>
+            <div className="container max-w-6xl ">
+                <h3 className="text-4xl font-bold text-center capitalize mb-4">Discover Amazing Books</h3>
                 <div className='flex flex-wrap px-2'>
-                    {data.featuredBooks.map((data:any,index:any)=>(
-                        <div key={index} className="w-1/3 sm:w-1/4 md:w-1/5 p-2">
+                    {books.map((data:any,index:any)=>(
+                        <div key={index} className="w-1/3 sm:w-1/4 md:w-1/6 p-2 px-2 md:px-3">
                             <Link href={`/book/${data.slug}`}>
                                 <div className="p-1 md:p-2 text-sm flex flex-col bg shadow">
                                     <img src={`${data.image}?w=250&h=300`} alt="" className="w-28 h-36 md:w-40 md:h-58 mb-2 img-gray self-center"/>
@@ -50,11 +52,13 @@ const Featured: React.FC<FeaturedProps> = () => {
 
             <div className="py-10 text-center">
                 <Link href="/login">
-                    <a className="bg-primary text-white rounded-full px-10 py-4">View More</a>
+                    <a className="bg-primary text-white rounded-md px-10 py-4">View More</a>
                 </Link>
             </div>
         </section>
     );
 };
+
+
 
 export default Featured;
